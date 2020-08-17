@@ -10,9 +10,8 @@
 
 # According to the standard:
 # http://zdharma.org/Zsh-100-Commits-Club/Zsh-Plugin-Standard.html
-
-ZERO="${(%):-%N}" # this gives immunity to functionargzero being unset
-0="${${ZERO:-${0:#$ZSH_ARGZERO}}:-${(%):-%N}}"
+#
+0="${${0:#$ZSH_ARGZERO}:-${(%):-%N}}"
 0="${${(M)0:#/*}:-$PWD/$0}"
 
 local aliasesFile=${0:h}/.kubectl_aliases
