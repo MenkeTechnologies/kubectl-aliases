@@ -89,7 +89,7 @@ function kubectl() { echo "+ kubectl $@">&2; command kubectl $@; }
 ### FAQ
 
 - **Doesn't this slow down my shell start up?** Sourcing the file that contains
-~500 aliases takes about 30-45 milliseconds in my shell (zsh). I don't think
+~790 aliases takes about 30-45 milliseconds in my shell (zsh). I don't think
 it's a big deal for me. Measure it with `echo $(($(date +%s%N)/1000000))`
 command yourself in your .bashrc/.zshrc.
 
